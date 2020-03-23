@@ -1,0 +1,355 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'student1/student_academics_display.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript">
+     function fun1 (per) {
+       var abs = 100 - per;
+          var chart = new CanvasJS.Chart("chartContainer1",
+          {
+            title:{
+              text: "Subject 1",
+              fontFamily: "Poppins",
+              fontWeight: "bold"
+            },
+      
+            legend:{
+              verticalAlign: "bottom",
+              horizontalAlign: "center"
+            },
+            data: [
+            {
+              startAngle: 270,
+             indexLabelFontSize: 17,
+             indexLabelFontWeight: "bold",
+             indexLabelFontFamily: "Poppins",
+             indexLabelFontColor: "darkgray",
+             indexLabelLineColor: "darkgrey",
+             indexLabelPlacement: "outside",
+             type: "doughnut",
+             //showInLegend: true,
+             dataPoints: [
+             {  y: per, legendText:"Attended lecture 75%", indexLabel: "Present",
+             exploded:true },
+             {  y: abs, legendText:"Not attended 25%", indexLabel: "Absent" }
+             ]
+           }
+           ]
+         });
+      
+          chart.render();
+        }
+        </script>
+        <!-------------------------------------- 2nd chart -->
+        
+    <script type="text/javascript">
+        function fun2 (per) {
+       var abs = 100 - per;
+          var chart = new CanvasJS.Chart("chartContainer2",
+          {
+            title:{
+              text: "Subject 2",
+              fontFamily: "Poppins",
+              fontWeight: "bold"
+            },
+      
+            legend:{
+              verticalAlign: "bottom",
+              horizontalAlign: "center"
+            },
+            data: [
+            {
+              startAngle: 270,
+             indexLabelFontSize: 17,
+             indexLabelFontWeight: "bold",
+             indexLabelFontFamily: "Poppins",
+             indexLabelFontColor: "darkgray",
+             indexLabelLineColor: "darkgrey",
+             indexLabelPlacement: "outside",
+             type: "doughnut",
+            //  showInLegend: true,
+             dataPoints: [
+             {  y: per, legendText:"Attended lecture 75%", indexLabel: "Present",
+             exploded:true },
+             {  y: abs, legendText:"Not attended 25%", indexLabel: "" }
+             ]
+           }
+           ]
+         });
+      
+          chart.render();
+        }
+        </script>
+      
+        <script type="text/javascript">
+           function fun3 (per) {
+            var abs = 100 - per; 
+             var chart = new CanvasJS.Chart("chartContainer3",
+             {
+               title:{
+                 text: "Subject 3",
+                 fontFamily: "Poppins",
+                 fontWeight: "bold"
+               },
+         
+               legend:{
+                 verticalAlign: "bottom",
+                 horizontalAlign: "center"
+               },
+               data: [
+               {
+                 startAngle: 270,
+                indexLabelFontSize: 17,
+                indexLabelFontWeight: "bold",
+                indexLabelFontFamily: "Poppins",
+                indexLabelFontColor: "darkgray",
+                indexLabelLineColor: "darkgrey",
+                indexLabelPlacement: "outside",
+                type: "doughnut",
+                //showInLegend: true,
+                dataPoints: [
+                {  y: per, legendText:"Attended lecture 75%", indexLabel: "Present",
+                exploded:true },
+                {  y: abs, legendText:"Not attended 25%", indexLabel: "Absent" }
+                ]
+              }
+              ]
+            });
+         
+             chart.render();
+           }
+           </script>
+            <script type="text/javascript">
+             function fun4 (per) {
+            var abs = 100 - per; 
+             var chart = new CanvasJS.Chart("chartContainer4",
+             {
+               title:{
+                 text: "Subject 4",
+                 fontFamily: "Poppins",
+                 fontWeight: "bold"
+               },
+         
+               legend:{
+                 verticalAlign: "bottom",
+                 horizontalAlign: "center"
+               },
+               data: [
+               {
+                 startAngle: 270,
+                indexLabelFontSize: 17,
+                indexLabelFontWeight: "bold",
+                indexLabelFontFamily: "Poppins",
+                indexLabelFontColor: "darkgray",
+                indexLabelLineColor: "darkgrey",
+                indexLabelPlacement: "outside",
+                type: "doughnut",
+                //showInLegend: true,
+                dataPoints: [
+                {  y: per, legendText:"Attended lecture 75%", indexLabel: "Present",
+                exploded:true },
+                {  y: abs, legendText:"Not attended 25%", indexLabel: "Absent" }
+                ]
+              }
+              ]
+            });
+         
+             chart.render();
+           }
+           </script>
+        
+       <script type="text/javascript">
+             function fun5 (per) {
+               var abs = 100 - per;
+             var chart = new CanvasJS.Chart("chartContainer5",
+             {
+               title:{
+                 text: "Subject 5",
+                 fontFamily: "Poppins",
+                 fontWeight: "bold"
+               },
+         
+               legend:{
+                 verticalAlign: "bottom",
+                 horizontalAlign: "center"
+               },
+               data: [
+               {
+                 startAngle: 270,
+                indexLabelFontSize: 17,
+                indexLabelFontWeight: "bold",
+                indexLabelFontFamily: "Poppins",
+                indexLabelFontColor: "darkgray",
+                indexLabelLineColor: "darkgrey",
+                indexLabelPlacement: "outside",
+                type: "doughnut",
+               //  showInLegend: true,
+                dataPoints: [
+                {  y: per, legendText:"Attended lecture 75%", indexLabel: "Present",
+                exploded:true },
+                {  y: abs, legendText:"Not attended 25%", indexLabel: "Absent" }
+                ]
+              }
+              ]
+            });
+         
+             chart.render();
+           }
+           </script>
+           {% comment %} <!-- ----------------------------------------------------------6th Chart -------------------------------------------> {% endcomment %}
+           <script type="text/javascript">
+            function fun6 (per) {
+             var abs = 100 - per;
+                var chart = new CanvasJS.Chart("chartContainer6",
+                {
+                  title:{
+                    text: "Subject 6",
+                    fontFamily: "Poppins",
+                    fontWeight: "bold"
+                  },
+            
+                  legend:{
+                    verticalAlign: "bottom",
+                    horizontalAlign: "center"
+                  },
+                  data: [
+                  {
+                    startAngle: 270,
+                   indexLabelFontSize: 17,
+                   indexLabelFontWeight: "bold",
+                   indexLabelFontFamily: "Poppins",
+                   indexLabelFontColor: "darkgray",
+                   indexLabelLineColor: "darkgrey",
+                   indexLabelPlacement: "outside",
+                   type: "doughnut",
+                   //showInLegend: true,
+                   dataPoints: [
+                   {  y: per, legendText:"Attended lecture 75%", indexLabel: "Present",
+                   exploded:true },
+                   {  y: abs, legendText:"Not attended 25%", indexLabel: "Absent" }
+                   ]
+                 }
+                 ]
+               });
+            
+                chart.render();
+              }
+              </script>
+    <title>Student's Academics</title>
+</head>
+<body onload="fun1({{list1.0}}),fun2({{list1.1}}),fun3({{list1.2}}),fun4({{list1.3}}),fun5({{list1.4}}),fun6({{list1.5}})">
+    <main>
+        <section class="profile-card">
+            <img src="jd.jpeg" class="profile-img "alt="">
+            
+            <div class="desc">
+                <h1 class="name">{{std_profile_obj.std_name}}</h1>
+                <h2 class="designation"><span>ID</span>: {{std_profile_obj.std_id}}</h2>
+                <h2 class="quali"><span>Branch</span>: {{std_profile_obj.std_branch}}</h2>
+                <h2 class="course"><span>Year of Studying</span>: {{std_profile_obj.std_year}}</h2>
+                <h2 class="branch"><span>Phone no. </span>: {{std_profile_obj.std_phone_no}}<span>Parent's no. </span>: {{std_profile_obj.std_parent_phone_no}}</h2>
+                <h2 class="branch"><span>Date Of Birth</span>:{{std_profile_obj.std_dob}}</h2>
+                <h3><span>Father's Name</span>: {{std_profile_obj.std_fathers_name}}<span>Mother's Name</span>: {{std_profile_obj.std_mothers_name}}</h3>
+                <div class="contact">
+                    <span>Student's email</span><a href="">: {{std_profile_obj.std_email}}</a><i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="contact">
+                    <span>Parent's email</span><a href="">: {{std_profile_obj.std_parent_email}}</a><i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <a href="{% url 'homepage_display' %}">Back to Home</a>
+            </div>
+        </section>
+        <section class="marks">
+        <h1>Marks Details</h1>
+       
+            <table class="marks-table">
+                <tr class="head">
+                    <th>SEM II</th>
+                    <th>Term Test I</th>
+                    <th>Term Test II</th>
+                    <th>Final </th>
+                </tr>
+                <tr>
+                    <th>Subject1</th>
+                    <td> {{std_profile_obj.s1_tt1}}</td>
+                    <td> {{std_profile_obj.s1_tt2}}</td>
+                    <td> {{std_profile_obj.s1_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject2</th>
+                    <td> {{std_profile_obj.s2_tt1}}</td>
+                    <td> {{std_profile_obj.s2_tt2}}</td>
+                    <td> {{std_profile_obj.s2_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject3</th>
+                    <td> {{std_profile_obj.s3_tt1}}</td>
+                    <td> {{std_profile_obj.s3_tt2}}</td>
+                    <td> {{std_profile_obj.s3_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject4</th>
+                    <td> {{std_profile_obj.s4_tt1}}</td>
+                    <td> {{std_profile_obj.s4_tt2}}</td>
+                    <td> {{std_profile_obj.s4_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject5</th>
+                    <td> {{std_profile_obj.s5_tt1}}</td>
+                    <td> {{std_profile_obj.s5_tt2}}</td>
+                    <td> {{std_profile_obj.s5_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject6</th>
+                    <td> {{std_profile_obj.s6_tt1}}</td>
+                    <td> {{std_profile_obj.s6_tt2}}</td>
+                    <td> {{std_profile_obj.s6_sem1}}</td>
+                    
+                </tr>
+                
+            
+            </table>
+            
+        </section>
+        {% comment %} <section>
+            {{list1.0}}
+            {{list1.1}}
+            {{list1.2}}
+            {{list1.3}}
+            {{list1.4}}
+            {{list1.5}}
+        </section> {% endcomment %}
+        </section>
+        <section class="attendance">
+            <h1 class="headline">Attendance System</h1>
+            <div class="chart-div">
+            <div id="chartContainer1" class="chart" style="height: 300px; width: 30%;">
+            </div>
+            <div id="chartContainer2" class="chart" style="height: 300px; width: 30%;">
+            </div>
+            <div id="chartContainer3" class="chart" style="height: 300px; width: 30%;">
+            </div>
+        </div>
+            <div class="chart-div">
+            <div id="chartContainer4" class="chart" style="height: 300px; width: 30%;">
+            </div>
+            <div id="chartContainer5" class="chart" style="height: 300px; width: 30%;">
+            </div>
+            <div id="chartContainer6" class="chart" style="height: 300px; width: 30%;">
+            </div>
+        </div>
+        </section>
+    </main>
+</body>
+</html>

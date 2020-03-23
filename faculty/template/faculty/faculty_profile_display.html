@@ -1,0 +1,65 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'faculty/fac_info.css' %}">
+
+    <title>{{object.name}}</title>
+</head>
+<body>
+    <main>
+        <section class="profile-card">
+            <img src="jd.jpeg" class="profile-img "alt="">
+            
+            <div class="desc">
+                <h1 class="name">{{fac_profile_obj.fac_name}}</h1>
+                <h2 class="designation">{{fac_profile_obj.fac_designation}}</h2>
+                <h2 class="quali"><span>Qualification</span>: {{fac_profile_obj.fac_qaulification}}</h2>
+                <h2 class="course"><span>Ongoing Course</span>: {{fac_profile_obj.fac_course}}</h2>
+                <h2 class="branch"><span>Department</span>: {{fac_profile_obj.fac_department}}</h2>
+<!--                 <h3><span>Date of Joining</span>:28/12/2000</h3> -->
+                <div class="contact">
+                    <span><a href="">{{fac_profile_obj.fac_email}}</a></span><i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                
+                <div >
+                    <form action="" class="lecture-info" method="post">{% csrf_token %}
+                    <h3 class="lectures"><span >Total Lectures</span>:
+                     {{lecture.total_lecures}}
+                     </h3>
+                    <input type="submit" value="Add Lecture">
+                    </form>    
+                </div>  
+                 
+            </div>
+            <a href="{% url 'homepage_display' %}">Back to Home</a>
+        </section>
+        
+        <section class="tables">
+            <caption></caption>
+            <table class="std-info">
+            <tr><th>ID_no</th><th>Name</th><th>Action</th></tr>
+            {% for stud in obj_std %}
+            <tr><td>{{stud.std_id}}</td>
+            <td>{{stud.std_name}}</td>
+            <td><a href="/std_info/{{stud.std_id}}">More Info</a></td></tr>
+            {% endfor %}
+            </table>
+        </section>
+        <section>
+        {% comment %} <form action="" method="POST">{% csrf_token %}
+        <h3>File Name : <h3>{{dox_form.fac_file_name1}} : {{dox_form.fac_file1}}
+        <h3>File Name : <h3>{{dox_form.fac_file_name2}} : {{dox_form.fac_file2}}
+            <input type="submit" value="upload">
+        </form>
+        </section> {% endcomment %}
+        
+    </main>    
+</body>
+</html>

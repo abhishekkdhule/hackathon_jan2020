@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'faculty/student_academics_display.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Student's Academics</title>
+</head>
+<body>
+    <main>
+<body>
+    <main>
+        <section class="profile-card">
+            <img src="jd.jpeg" class="profile-img "alt="">
+            
+            <div class="desc">
+                <h1 class="name">{{std_obj.std_name}}</h1>
+                <h2 class="designation">{{std_obj.std_id}}</h2>
+                <h2 class="quali"><span>Branch</span>: {{std_obj.std_branch}}</h2>
+                <h2 class="course"><span>Year of Studying</span>: {{std_obj.std_year}}</h2>
+                <h2 class="branch"><span>Phone no. </span>: {{std_obj.std_phone_no}}<span>Parent's no. </span>: {{std_obj.std_parent_phone_no}}</h2>
+                <h2 class="branch"><span>Date Of Birth</span>:{{std_obj.std_dob}}</h2>
+                <h3><span>Father's Name</span>: {{std_obj.std_fathers_name}}<span>Mother's Name</span>: {{std_obj.std_mothers_name}}</h3>
+                <div class="contact">
+                    <span>Student's email</span><a href="">: {{std_obj.std_email}}</a><i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="contact">
+                    <span>Parent's email</span><a href="">: {{std_obj.std_parent_email}}</a><i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+
+            </div>
+            <a href="{% url 'homepage_display' %}">Back to Home</a>
+        </section>
+        <section class="marks">
+        <h1>Marks Details</h1>
+        <form action="" method="post">{% csrf_token %}
+            <table class="marks-table">
+                <tr class="head">
+                    <th>SEM II</th>
+                    <th>Term Test I</th>
+                    <th>Term Test II</th>
+                    <th>Final </th>
+                </tr>
+                <tr>
+                    <th>Subject1</th>
+                    <td> {{std_form.s1_tt1}}</td>
+                    <td> {{std_form.s1_tt2}}</td>
+                    <td> {{std_form.s1_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject2</th>
+                    <td> {{std_form.s2_tt1}}</td>
+                    <td> {{std_form.s2_tt2}}</td>
+                    <td> {{std_form.s2_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject3</th>
+                    <td> {{std_form.s3_tt1}}</td>
+                    <td> {{std_form.s3_tt2}}</td>
+                    <td> {{std_form.s3_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject4</th>
+                    <td> {{std_form.s4_tt1}}</td>
+                    <td> {{std_form.s4_tt2}}</td>
+                    <td> {{std_form.s4_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject5</th>
+                    <td> {{std_form.s5_tt1}}</td>
+                    <td> {{std_form.s5_tt2}}</td>
+                    <td> {{std_form.s5_sem1}}</td>
+                    
+                </tr>
+                 <tr>
+                    <th>Subject6</th>
+                    <td> {{std_form.s6_tt1}}</td>
+                    <td> {{std_form.s6_tt2}}</td>
+                    <td> {{std_form.s6_sem1}}</td>
+                    
+                </tr>
+                <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="submit" value="Save"></td>
+            
+            </table>
+            <form>
+        </section>
+        <section class="attendance">
+
+        </section>
+    </main>
+    
+</body>
+</html>
+    </main>
+</body>
+</html>

@@ -1,0 +1,237 @@
+*{
+    margin:0px;
+    padding:0;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  body{
+    width:90%;
+    margin:auto;
+    position: relative;
+    /* background: red; */
+  }
+  /* Nvbar */
+
+header{
+    /* margin-top:-3em; */
+    position:fixed;
+    top: 0;
+    width:95vw;
+    height:8vh;
+    left:50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: #ccc;
+    z-index: 10;
+
+}
+nav{
+    height: 100%;
+    width:100%;
+    position: relative;
+}
+.nav-links{
+    display:flex;
+    width:100%;
+    height: 100%;
+    /* background: blueviolet; */
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+    height:100%;
+}
+.nav-links li{
+    height:100%;
+    width:100%;
+    /* cursor: pointer; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .2s ;
+}
+.nav-link{
+    width:100%;
+    text-align: center;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding:2.2vh 0;
+    text-transform: uppercase;
+
+}
+.active::after
+{
+content: '';
+height: 2px;
+width: 95%;
+position: absolute;
+background: black;
+bottom:0;
+}
+.nav-links li:hover:not(.active)
+{
+    background:#dedede;
+    transform: scale(1.05);
+}
+.burger{
+    display: none;
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-50%);
+    padding: 1em;
+    cursor:pointer;
+    z-index:1;
+}
+.burger div{
+    width:35px;
+    height:4px;
+    background: black;
+    margin:5px 0;
+    transition: transform .6s ease;
+}
+.current div{
+    position: relative;
+
+}
+.current .first{
+    top:8.5px;
+    transform: rotate(45deg);
+}
+.current .second{
+    opacity: 0;
+}
+.current .third{
+    bottom:8.5px;
+    transform: rotate(-45deg);
+}
+
+@media (max-width:720px){
+    .burger{
+        display:block;
+    }
+    .nav-links{
+        display:none;
+    }
+
+}
+.mobile{
+    display:block;
+    margin-top:8vh;
+}
+.mobile li{
+    background:#ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    
+}
+.mobile li:hover:not(.active){
+    transform: scale(1.01);
+}
+  
+  main{
+    /* position: relative; */
+    /* bottom:-3em; */
+    /* transform:translateY(3em); */
+    font-family: 'Poppins', sans-serif;
+  }  
+  section:first-child{
+    margin-top: 5em;
+  }
+  section,.footer{
+    padding:2em;
+    margin:2em 0 2em 0 ;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  /* HOMEPAGE */
+  .card-lists{
+    list-style: none;
+    overflow:auto;
+    width:100%;
+    /* margin: 0 7em 0 7em; */
+    
+  }
+  .cards{
+    margin:auto;
+    /* background:red; */
+    float:left;
+    min-width:342px;
+    min-height:350px;
+    /* background:green; */
+    margin: .9em;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    cursor:pointer;
+  }
+   .faculty-cards .card-lists li:hover{
+    /* background:red; */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.30), 0 6px 6px rgba(0,0,0,0.60);
+  }
+  /*Faculties image of homepage*/
+  .image{
+    margin: auto;
+    min-width: 13em;
+    min-height:8em;
+    margin-top: 3em;
+    margin-left: 4em;
+  }
+  h3{
+    text-align: center;
+  }
+  h5{
+    text-align: center;
+  }
+  
+  /* Footer css */
+  .footer{
+    display:flex;
+    justify-content: space-around;
+   background-color: #d8d6d385;
+   transition: .2s;
+  }
+  .footer ul{
+    list-style: none;
+  }
+  .footer a{
+    color: #6d6d6d;
+  
+  }
+  .fa{
+    width:1.5em;
+    color: #666;
+  }
+  .footer a:hover{
+    text-decoration: underline;
+    color: black;
+  }
+  .fa:hover{
+    color: black;
+  }
+  .footer .ul-heading{
+    position: relative;
+    right:.8em;
+    text-align: left;
+    font-size: 1.3em;
+  }
+  .footer span{
+    position: absolute;
+    left:-1em;
+    opacity: 0;
+  }
+  .footer .ul-heading:hover span{
+    opacity: .9;
+  }
+
+@media (max-width:720px){
+  .footer{
+    flex-direction: column;
+    /* align-items: center; */
+    padding:2em;
+  }
+}

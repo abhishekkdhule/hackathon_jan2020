@@ -1,0 +1,8 @@
+D:\AWT911\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe
+D:\AWT911\TicTacToe\TicTacToe\bin\Debug\TicTacToe.pdb
+D:\AWT911\TicTacToe\TicTacToe\obj\x86\Debug\TicTacToe.FrmMain.resources
+D:\AWT911\TicTacToe\TicTacToe\obj\x86\Debug\TicTacToe.Properties.Resources.resources
+D:\AWT911\TicTacToe\TicTacToe\obj\x86\Debug\TicTacToe.csproj.GenerateResource.Cache
+D:\AWT911\TicTacToe\TicTacToe\obj\x86\Debug\TicTacToe.exe
+D:\AWT911\TicTacToe\TicTacToe\obj\x86\Debug\TicTacToe.pdb
+D:\AWT911\TicTacToe\TicTacToe\obj\x86\Debug\TicTacToe.csprojResolveAssemblyReference.cache

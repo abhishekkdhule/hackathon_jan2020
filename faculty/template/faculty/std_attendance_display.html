@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'faculty/attendance.css' %}">
+    <script src="{% static 'faculty/noback.js' %}"></script>
+    <title>Attendance</title>
+</head>
+<body>
+    <main>
+        <section>     
+        <form class="attendance" action="" method="POST"> {% csrf_token %}
+        <table class="attendance-table">
+        <tr><th>ID_no</th><th>Name</th><th>Attendance</th></tr>
+        {% for stud in std_object %}
+        <tr><td>{{stud.std_id}}</td><td>{{stud.std_name}}</td><td>
+            <label for="id_is_present_0"><input type="radio" name="{{stud.std_id}}" value="1" checked>
+         present</label>
+            <label for="id_is_present_1"><input type="radio" name="{{stud.std_id}}" value="0" required >
+         absent</label>
+        </td></tr>
+        {% endfor %}
+    </table>
+  
+    <input type="submit" value="Save">
+</form>
+</div>
+</section>
+</main>
+</body>
+</html>
