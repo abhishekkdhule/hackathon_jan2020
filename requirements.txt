@@ -1,3 +1,4 @@
+psycopg2-binary==2.7.7
 asgiref==3.2.3
 beautifulsoup4==4.8.2
 bs4==0.0.1
